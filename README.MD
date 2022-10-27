@@ -35,7 +35,7 @@ depending on model of mini computer.
 
 Choose your platform and model, then copy the corresponding folder to a destination of your choice.
 
-Unzip the files from the pdp11.zip archive downloaded from Paul Nankervis' website to the pdp11 folder contained within top level of the Electron application folder.
+Unzip the files from the pdp11.zip archive downloaded from Paul Nankervis' website to the pdp11 folder contained within the top level of the Electron application folder.
 
 ## *** IMPORTANT ***
 Do not overwrite the existing pdp11.html or pdp11-45.html, as these have been modified slightly to allow for the enhancements, such as the Windows 10 title bar, window drag region, and slide down console.
