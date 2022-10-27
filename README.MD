@@ -52,11 +52,17 @@ Stylesheet allows for additional formatting control in coordination with electro
 Added Window 10 style title bar on Windows systems.  Original contributor is Ronnie Dutta.  Updated IPCRenderer implementation code and drag region support added by yours truly.
 ```
 <div id="titlebar">
+    .
+    .
+    .
 </div>
 ```
 Affords better control of the documentation section of the page, allowing the console and documentation to scroll under the main control panel.
 ```
 <div id="thePage" style="margin: 16px; clear:both;">
+    .
+    .
+    .
 </div>
 ```
 Clickable area which toggles view of the console/documentation panel.  On macOS, the console tray is animated.  Unfortunately, on Windows, animation has not yet been implemented for Electron.
