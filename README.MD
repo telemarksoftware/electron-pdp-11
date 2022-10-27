@@ -76,7 +76,7 @@ npm start
 ```
 To package the electron application using electron-packager, use the provided x64.sh or x64.cmd script.
 
-Some usage notes:
+## Some usage notes
 
 On macOS systems, if you hover your mouse over the upper left corner, the macOS traffic light control buttons will become visible.
 
