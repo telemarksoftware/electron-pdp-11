@@ -6,7 +6,9 @@ The full story can be found on his website:  https://skn.noip.me/pdp11/pdp11.htm
 
 His entire archive of the PDP-11/70 and PDP-11/45 can be downloaded from:  https://skn.noip.me/pdp11/pdp11.zip
 
-This Electron app builds on the basis files contained within this zip file.  Also, since Electron is based on Chrome, a full fledge web debugger is automatically included with the application.  You can test this by clicking Command-Option-I on macOS, or Control-Shift-I on Windows systems.
+This Electron app builds on the basis files contained within this zip file, and therefore are required for this application.
+
+Since Electron is based on Chrome, a full fledge web debugger is automatically included with the application.  You can test this by clicking Command-Option-I on macOS, or Control-Shift-I on Windows systems.
 
 ![alt text](./assets/pdp11-developer.png)
 
