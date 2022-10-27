@@ -43,7 +43,7 @@ Stylesheet allows for additional formatting control in coordination with electro
 ```
 <link rel="stylesheet" href="style.css" type="text/css">
 ```
-Add Window 10 style title bar, allowing for window placement anywhere on screen.  Original contributor is Ronnie Dutta.  Updated IPCRenderer implementation code and drag region support added by yours truly.
+Added Window 10 style title bar on Windows systems.  Original contributor is Ronnie Dutta.  Updated IPCRenderer implementation code and drag region support added by yours truly.
 ```
 <div id="titlebar">
 </div>
@@ -77,6 +77,8 @@ npm start
 To package the electron application using electron-packager, use the provided x64.sh or x64.cmd script.
 
 ## Some usage notes
+
+To drag the entire window to another position, simply click-drag the title bar area.  The window position will persist between restarts.
 
 On macOS systems, if you hover your mouse over the upper left corner, the macOS traffic light control buttons will become visible.
 
