@@ -31,22 +31,22 @@ server.use(express.static(path.join(__dirname, 'pdp11')));
 //]);
 
 const createWindow = () => {
-  // Create the browser window.
-  const mainWindow = new BrowserWindow({
-    width: 1088,
-    height: 448,
+	// Create the browser window.
+	const mainWindow = new BrowserWindow({
+		width: 1088,
+		height: 448,
 		frame: false,
 		transparent: true,
 		hasShadow: true,
 		resizable: false,
 		maximizable: false,
 		titleBarStyle: 'customButtonsOnHover',				// MacOS
-    webPreferences: {
-      preload: path.join(__dirname, 'preload.js')
-    }
-  })
+		webPreferences: {
+			preload: path.join(__dirname, 'preload.js')
+		}
+	})
 
-  // Restore mainWindow position & size if setting exists
+	// Restore mainWindow position & size if setting exists
 	if (settings.hasSync('mainWindow.bounds')) {
 		mainWindow.setBounds(settings.getSync('mainWindow.bounds'));
 	}
@@ -56,17 +56,17 @@ const createWindow = () => {
 		settings.setSync('mainWindow.bounds',mainWindow.getBounds());
 	});
 
-  // Prevent nagigation away from main page.
-  mainWindow.webContents.on('will-navigate', (event) => {
-    event.preventDefault()
-  });
+	// Prevent nagigation away from main page.
+	mainWindow.webContents.on('will-navigate', (event) => {
+		event.preventDefault()
+	});
 
-   // and load the index.html of the app.
-  mainWindow.loadURL('http://localhost:1170/pdp11.html');
-  
+	// and load the index.html of the app.
+	mainWindow.loadURL('http://localhost:1170/pdp11.html');
+
 	// Handlers for IPC
 	ipcMain.on('minimize', () => {
-	    mainWindow.minimize();
+		mainWindow.minimize();
 	});
 	ipcMain.on('maximize', () => {
 		mainWindow.maximize();
@@ -80,38 +80,38 @@ const createWindow = () => {
 	ipcMain.handle('ismaximized', () => {
 		return mainWindow.isMaximized();
 	});
-  // Toggle console tray
-  ipcMain.on('console', () => {
-    if (mainWindow.getBounds().height === 868) {
-      mainWindow.setSize(1088,448,true);
-    } else {
-      mainWindow.setSize(1088,868,true);
-    }
-  });
+	// Toggle console tray
+	ipcMain.on('console', () => {
+		if (mainWindow.getBounds().height === 868) {
+			mainWindow.setSize(1088,448,true);
+		} else {
+			mainWindow.setSize(1088,868,true);
+		}
+	});
 
-  // Open the DevTools.
-  // mainWindow.webContents.openDevTools()
+	// Open the DevTools.
+	// mainWindow.webContents.openDevTools()
 }
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
 app.whenReady().then(() => {
-  createWindow()
+	createWindow()
 
-  app.on('activate', () => {
-    // On macOS it's common to re-create a window in the app when the
-    // dock icon is clicked and there are no other windows open.
-    if (BrowserWindow.getAllWindows().length === 0) createWindow()
-  })
+	app.on('activate', () => {
+		// On macOS it's common to re-create a window in the app when the
+		// dock icon is clicked and there are no other windows open.
+		if (BrowserWindow.getAllWindows().length === 0) createWindow()
+	})
 })
 
 // Quit when all windows are closed, except on macOS. There, it's common
 // for applications and their menu bar to stay active until the user quits
 // explicitly with Cmd + Q.
 app.on('window-all-closed', () => {
-  //if (process.platform !== 'darwin')
-  app.quit()
+	//if (process.platform !== 'darwin')
+		app.quit()
 })
 
 // In this file you can include the rest of your app's specific main process
