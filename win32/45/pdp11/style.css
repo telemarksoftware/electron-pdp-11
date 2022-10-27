@@ -1,0 +1,150 @@
+a {
+	pointer-events: none;
+}
+body {
+    max-width: 760px;
+    text-overflow: clip;
+    margin: 0;
+	background: transparent;
+	/*border-radius: 6px;*/
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+	outline: 1pt solid hsla(0, 0%, 47%, .7);
+	outline-offset: -1pt;
+	-ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+body::-webkit-scrollbar { /* Hide scroll bar while still functional */
+	width: 0px;
+}
+pre {
+    max-width: 760px;
+    overflow: hidden;
+}
+/* CSS style to add fade animation */
+body {
+	animation: fadeInAnimation ease 1s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+	0% {
+		opacity: .1;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes fadeOutAnimation {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: .1;
+	}
+}
+.frame {
+	z-index: 2;
+	position: fixed;
+	top:0;
+	bottom:0;
+	left: 0;
+	right: 0;
+	margin: 0;
+	padding: 0;
+}
+#thePage {
+	z-index: 1;
+	position: absolute;
+	top: 314px;
+}
+div#console {
+	z-index: 3;
+	display: block;
+	position: absolute;
+	height: 40px;
+	width: 40px;
+	bottom: 0;
+	right: 16px;
+	cursor: ns-resize;
+}
+/* CSS to add draggable Windows 10 Titlebar and windows controls (disabled on darwin platform [preload.js]) */
+#titlebar {
+	display: block;
+	position: fixed;
+	width: 100%;
+	height: 24px;
+	z-index: 4;
+	overflow: hidden;
+	/*border-radius: 6px 6px 0px 0px;*/
+}
+#titlebar #drag-region {
+	display: grid;
+	grid-template-columns: auto 108px;
+	width: 100%;
+	height: 100%;
+	-webkit-app-region: drag;
+}
+#window-controls {
+	display: grid;
+	grid-template-columns: repeat(3, 36px);
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+	z-index: 4;
+}
+#window-controls {
+	-webkit-app-region: no-drag;
+}
+#window-controls .button {
+	grid-row: 1 / span 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+#window-controls .button {
+	user-select: none;
+}
+#window-controls .button:hover {
+	background: rgba(255,255,255,0.1);
+}
+#window-controls .button:active {
+	background: rgba(255,255,255,0.2);
+}
+#close-button:hover {
+	background: #E81123 !important;
+}
+#close-button:active {
+	background: #F1707A !important;
+}
+#close-button:active .icon {
+	filter: invert(1);
+}
+#min-button {
+	grid-column: 1;
+	visibility: hidden;
+}
+#max-button, #restore-button {
+	grid-column: 2;
+	visibility: hidden;
+}
+#close-button {
+	grid-column: 3;
+	visibility: hidden;
+}
+#restore-button {
+	display: none !important;
+	visibility: hidden;
+}
+.maximized #restore-button {
+	display: flex !important;
+}
+.maximized #max-button {
+	display: none;
+}
