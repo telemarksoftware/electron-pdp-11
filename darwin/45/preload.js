@@ -12,6 +12,7 @@ const { ipcRenderer } = require('electron');
 document.onreadystatechange = (event) => {
 	if (document.readyState == "complete") {
 		handleWindowControls();
+		// Tiny hack so app does not start with blank white screen...
 		setTimeout(() => {
 			document.body.style.backgroundColor = "#c0c0c0";
 		}, 1000);
