@@ -1,0 +1,19 @@
+{
+  "name": "PDP-11/45",
+  "version": "1.0.0",
+  "description": "Emulation of PDP-11/45",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "telemark software&reg;",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^21.2.0",
+    "electron-packager": "^17.0.0"
+  },
+  "dependencies": {
+    "electron-settings": "^4.0.2",
+    "express": "^4.18.2"
+  }
+}

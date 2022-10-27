@@ -1,0 +1,2 @@
+#!/bin/sh
+npx electron-packager . "PDP-11" --CompanyName "telemark software®" --appCopyright "Copyright © 2022, telemark software, llc.  All rights reserved." --platform=darwin --arch=x64 --icon=digital@2x.icns --out=build
