@@ -12,18 +12,18 @@ This Electron app builds on the basis files contained within this zip file.  Als
 
 For the following discussion, it is assumed the reader has knowledge of Electron, Node, and NPM and also has all three installed on their system...
 
-How does it work?
+## How does it work?
 
 The app uses the express node module to serve files contained within the pdp11 folder of the Electron application.  This includes the main page pdp11.html, and the OS disk images (*.dsk) within the folder.
 
 Electron starts and initiates express server by listening on TCP/IP port 1170 for the PDP-11/70, or TCP/IP port 1145 for the PDP-11/45.  Electron then loads the URL of the main page via HTTP request to http://localhost:1170/pdp11.html, or http://localhost:1145/pdp11-45.html depending on model of mini computer.
 
 
-Get Up & Running
+## Get Up & Running
 
 Choose your platform and model, then copy the corresponding folder to a destination of your choice.
 
-Unzip the files from pdp11.zip archive, downloaded from Paul Nankervis' website to the pdp11 folder contained within top level of the Electron application folder.
+Unzip the files from the pdp11.zip archive downloaded from Paul Nankervis' website to the pdp11 folder contained within top level of the Electron application folder.
 
 *** IMPORTANT ***
 Do not overwrite the existing pdp11.html or pdp11-45.html, as these have been modified slightly to allow for the enhancements, such as the Windows 10 title bar, window drag region, and slide down console.
@@ -55,16 +55,16 @@ Disabling of onfocus for console, which shifted the rendered HTML to top of page
 //document.getElementById('0').focus();
 
 
-Implementation
+## Implementation
 
 CD into the top level of your destination folder and run the following to install node dependancies:
-
+```
 npm init
-
+```
 Start the electron application via:
-
+```
 npm start
-
+```
 To package the electron application using electron-packager, use the provided x64.sh or x64.cmd script.
 
 Some usage notes:
