@@ -11,7 +11,11 @@ This Electron app builds on the basis files contained within this zip file.  Als
 ![alt text](./assets/pdp11-developer.png)
 
 For the following discussion, it is assumed the reader has knowledge of Electron, Node, and NPM and also has all three installed on their system...
-
+## Quickstart Tip
+Download and install Node.js from the official website.  Later, when you install dependencies (see below), electron will automatically be installed as a node module.
+```
+https://nodejs.org
+```
 ## How does it work?
 
 The app uses the express node module to serve files contained within the pdp11 folder of the Electron application.  This includes the main page pdp11.html, and the OS disk images (*.dsk) within the folder.
