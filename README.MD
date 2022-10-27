@@ -68,7 +68,7 @@ Disabling of onfocus for console, which shifted the rendered HTML to top of page
 
 CD into the top level of your destination folder and run the following to install node dependancies:
 ```
-npm init
+npm install
 ```
 Start the electron application via:
 ```
