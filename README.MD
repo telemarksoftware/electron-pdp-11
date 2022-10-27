@@ -92,6 +92,8 @@ Hovering the mouse over the lower right of the front panel, the mouse cursor wil
 
 Clicking this area toggles view of the console used to boot the various disk images, and also displays the documentation which can be viewed by scrolling the page.
 
+When first run on Windows, you may get a firewall warning which is to be expected.  Recommend allowing.
+
 If all goes according to plan/instructions, you should have your very own self-contained, working, DEC PDP-11 mini computer available to you on call and on your desktop for your viewing pleasure!
 
 Enjoy!
