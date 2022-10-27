@@ -13,8 +13,8 @@ const express = require('express');
 // Our self-contained web server
 const server = express();
 // Listen on port
-server.listen(5070);
-// Serve static files in pdp11 folder:  http://localhost:5070/pdp11.html
+server.listen(1170);
+// Serve static files in pdp11 folder:  http://localhost:1170/pdp11.html
 server.use(express.static(path.join(__dirname, 'pdp11')));
 
 // Register file:// for privileged local file access bypassing Content Security Protocol
@@ -62,7 +62,7 @@ const createWindow = () => {
   });
 
    // and load the index.html of the app.
-  mainWindow.loadURL('http://localhost:5070/pdp11.html');
+  mainWindow.loadURL('http://localhost:1170/pdp11.html');
   
 	// Handlers for IPC
 	ipcMain.on('minimize', () => {
