@@ -43,7 +43,7 @@ Stylesheet allows for additional formatting control in coordination with electro
 ```
 <link rel="stylesheet" href="style.css" type="text/css">
 ```
-Add Window 10 style title bar, allowing for window placement anywhere on screen.  Contributor is Ronnie Dutta, who's repository can be found:  https://github.com/binaryfunt/electron-seamless-titlebar-tutorial.  Updated using IPCRenderer [without require('electron').remote] which is a security issue], implementation code and Drag region support added by yours truly.
+Add Window 10 style title bar, allowing for window placement anywhere on screen.  Original contributor is Ronnie Dutta, but updated to use IPCRenderer.  Implementation code and Drag region support added by yours truly.
 ```
 <div id="titlebar">
 </div>
