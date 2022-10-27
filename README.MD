@@ -16,7 +16,15 @@ For the following discussion, it is assumed the reader has knowledge of Electron
 
 The app uses the express node module to serve files contained within the pdp11 folder of the Electron application.  This includes the main page pdp11.html, and the OS disk images (*.dsk) within the folder.
 
-Electron starts and initiates express server by listening on TCP/IP port 1170 for the PDP-11/70, or TCP/IP port 1145 for the PDP-11/45.  Electron then loads the URL of the main page via HTTP request to http://localhost:1170/pdp11.html, or http://localhost:1145/pdp11-45.html depending on model of mini computer.
+Electron starts and initiates express server by listening on TCP/IP port 1170 for the PDP-11/70, or TCP/IP port 1145 for the PDP-11/45.  Electron then loads the URL of the main page via HTTP request to
+```
+http://localhost:1170/pdp11.html
+```
+or
+```
+http://localhost:1145/pdp11-45.html
+```
+depending on model of mini computer.
 
 
 ## Get Up & Running
@@ -31,29 +39,29 @@ Do not overwrite the existing pdp11.html or pdp11-45.html, as these have been mo
 Exactly what was modified?  Here is the list:
 
 Stylesheet allows for additional formatting control in coordination with electron application.
-
+```
 <link rel="stylesheet" href="style.css" type="text/css">
-
+```
 Add Window 10 style title bar, allowing for window placement anywhere on screen.  Contributor is Ronnie Dutta, who's repository can be found:  https://github.com/binaryfunt/electron-seamless-titlebar-tutorial.  Updated using IPCRenderer [without require('electron').remote] which is a security issue], implementation code and Drag region support added by yours truly.
-
+```
 <div id="titlebar">
 </div>
-
+```
 Affords better control of the documentation section of the page, allowing the console and documentation to scroll under the main control panel.
-
+```
 <div id="thePage" style="margin: 16px; clear:both;">
 </div>
-
+```
 Clickable area which toggles view of the console/documentation panel.  On macOS, the console tray is animated.  Unfortunately, on Windows, animation has not yet been implemented for Electron.
-
+```
 <div id="console"></div>
-
+```
 ![alt text](./assets/pdp11-console.png)
 
 Disabling of onfocus for console, which shifted the rendered HTML to top of page.
-
+```
 //document.getElementById('0').focus();
-
+```
 
 ## Implementation
 
