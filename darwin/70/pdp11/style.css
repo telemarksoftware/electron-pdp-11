@@ -2,9 +2,9 @@ a {
 	pointer-events: none;
 }
 body {
-    max-width: 1088px;
-    text-overflow: clip;
-    margin: 0;
+	max-width: 1088px;
+	text-overflow: clip;
+	margin: 0;
 	background: transparent;
 	border-radius: 6px;
 	-moz-user-select: none;
@@ -13,7 +13,7 @@ body {
 	outline: 1pt solid hsla(0, 0%, 47%, .7);
 	outline-offset: -1pt;
 	-ms-overflow-style: none; /* for Internet Explorer, Edge */
-    scrollbar-width: none; /* for Firefox */
+	scrollbar-width: none; /* for Firefox */
 	overflow-y: scroll;
 	overflow-x: hidden;
 }
@@ -21,8 +21,8 @@ body::-webkit-scrollbar { /* Hide scroll bar while still functional */
 	width: 0px;
 }
 pre {
-    max-width: 1088px;
-    overflow: hidden;
+	max-width: 1088px;
+	overflow: hidden;
 }
 /* CSS style to add fade animation */
 body {
@@ -70,14 +70,13 @@ div#console {
 	bottom: 0;
 	right: 16px;
 	cursor: ns-resize;
-	/*background: url('1451905.png') no-repeat;*/
 }
 /* CSS to add draggable Windows 10 Titlebar and windows controls (disabled on darwin platform [preload.js]) */
 #titlebar {
 	display: block;
 	position: fixed;
 	width: 100%;
-	height: calc(100vh * 0.056);
+	height: 24px;
 	z-index: 4;
 	overflow: hidden;
 	border-radius: 6px 6px 0px 0px;
