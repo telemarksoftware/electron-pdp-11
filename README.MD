@@ -14,7 +14,7 @@ Since Electron is based on Chrome, a full fledge web debugger is automatically i
 
 For the following discussion, it is assumed the reader has knowledge of Electron, Node, and NPM and also has all three installed on their system...
 ## Quickstart Tip
-Download and install Node.js from the official website.  Later, when you install dependencies (see below), electron will automatically be installed as a node module.
+Download and install Node.js from the official website.  This installation also installs NPM.  Later, when you install dependencies (see below), electron will automatically be installed as a node module.
 ```
 https://nodejs.org
 ```
