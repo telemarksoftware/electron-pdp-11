@@ -49,7 +49,7 @@ Stylesheet allows for additional formatting control in coordination with electro
 ```
 <link rel="stylesheet" href="style.css" type="text/css">
 ```
-Added Window 10 style title bar on Windows systems.  Original contributor is Ronnie Dutta.  Updated IPCRenderer implementation code and drag region support added by yours truly.
+Added Windows 10 style title bar on Windows systems.  Original contributor is Ronnie Dutta.  Updated to IPCRenderer implementation code and drag region support added by yours truly.
 ```
 <div id="titlebar">
     .
